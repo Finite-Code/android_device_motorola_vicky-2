@@ -38,3 +38,7 @@ PRODUCT_PACKAGES += \
     init.mt6789.rc \
     fstab.mt6789
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.light
+
