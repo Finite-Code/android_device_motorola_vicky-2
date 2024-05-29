@@ -1,5 +1,5 @@
 #
-# Copyright (C) 20201 Lineage-OS Project
+# Copyright (C) 2021 Lineage-OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,20 +14,17 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.mt6789.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init.mt6789.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/init
-include $(BUILD_PREBUILT)
+prebuilt_etc {
+    name: "fstab.mt6789",
+    src: "fstab.mt6789",
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
 
-include $(CLEAR_VARS)
-LOCAL_MODULE       := fstab.mt6789
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/fstab.mt6789
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)
-include $(BUILD_PREBUILT)
+prebuilt_etc {
+    name: "init.mt6789.rc",
+    src: "init.mt6789rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
