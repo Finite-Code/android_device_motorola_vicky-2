@@ -57,6 +57,7 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Init
 PRODUCT_PACKAGES += \
+    init.recovery.mt6789.rc \
     init.mt6789.rc \
     fstab.mt6789 \
     fstab.mtmt6789.vendor_ramdisk
@@ -64,4 +65,3 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.light
-
